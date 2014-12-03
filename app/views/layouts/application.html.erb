@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="neocom">
+  <head>
+    <title>NeoCom</title>
+
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= stylesheet_link_tag 'angular-material.min', media: 'all', 'data-turbolinks-track' => true %>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <%= yield %>
+
+  </body>
+</html>

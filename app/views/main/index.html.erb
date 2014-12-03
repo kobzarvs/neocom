@@ -1,0 +1,167 @@
+<section layout="row" flex>
+
+  <md-content layout="column" flex="20" layout-align="start start" class="md-theme-indigo" ng-controller="AppCtrl">
+		<md-toolbar class="md-whiteframe-z2">
+      <h1 class="md-toolbar-tools">Labels</h1>
+    </md-toolbar>
+		<md-content class="md-padding" flex style="width:100%">
+			<md-list ng-repeat="i in items">
+				<md-item>
+					<md-item-content>
+					<md-button style="width:100%; text-align:left"> Primary {{i}} </md-button>
+					</md-item-content>
+				</md-item>
+			</md-list>
+		</md-content>
+		
+		<div ng-controller="MyController">
+		  <md-button ng-click="openBottomSheet()">
+		    Open a Bottom Sheet!
+		  </md-button>
+		</div>
+  </md-content>
+	
+	<md-content flex ng-controller="AppCtrl" layout="column" layout-fill layout-align="start start">
+			<md-toolbar  class="md-padding md-whiteframe-z2 darked">
+	      <h1 class="md-toolbar-tools">Labels</h1>
+	    </md-toolbar>
+			
+			<md-content>
+	      <p>
+	        The left sidenav will 'lock open' on a medium (>=960px wide) device.
+					
+	      </p>
+
+	      <div>
+	        <md-button ng-click="toggleRight()" class="md-primary">
+	          Toggle right
+	        </md-button>
+	      </div>
+	      <div>
+	        <input type="search" placeholder="Search..." class="md-whiteframe-z1 custom" ></input>
+	      </div>
+
+	      <div ng-controller="MyController">
+	        <md-button ng-click="openToast()">
+	          Open a Toast!
+	        </md-button>
+	      </div>
+			</md-content>
+  </md-content>
+
+  <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+    <md-toolbar class="md-theme-light">
+      <h1 class="md-toolbar-tools">Sidenav Right</h1>
+    </md-toolbar>
+    <md-content ng-controller="RightCtrl" class="md-padding">
+      <md-button ng-click="close()" class="md-primary">
+        Close Sidenav Right
+      </md-button>
+    </md-content>
+  </md-sidenav>
+
+</section>
+
+
+
+<!--
+<section ng-controller="TimeCtrl as tc">
+<div class="col-md-12">
+
+</div>
+
+<div class="col-md-2">
+<a href ng-click="tc.onclick(1)">Click me</a>
+
+<h4>Labels</h4>
+<pre>Label: {{tc.asyncSelected | json}}</pre>
+<input type="text" ng-model="tc.asyncSelected" placeholder="Labels loaded via $http" typeahead="label for label in tc.getLabels($viewValue)" typeahead-loading="loadingLabels" class="form-control">
+<i ng-show="loadingLabels" class="glyphicon glyphicon-refresh"></i>
+
+<accordion close-others="false">
+<accordion-group is-open="status.open" ng-repeat="label in tc.labels">
+<accordion-heading class="width:100%">
+{{label}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+</accordion-heading>
+This is just some content to illustrate fancy headings.
+</accordion-group>
+</accordion>
+</div>
+<div class="col-md-8">center</div>
+
+<div class="col-md-2">
+<div layout="column" layout-fill>
+
+
+
+</div></div>
+
+<div class="col-md-12">footer</div>
+
+
+</section>
+-->
+
+<!-- script>
+var editor = ace.eit("editor");
+var coffeeMode = ace.require("ace/mode/coffee").Mode;
+//editor.getSession().setMode(new coffeeMode());
+var langTools = ace.require("ace/ext/language_tools");
+editor.setOptions({
+enableBasicAutocompletion: true,
+enableLiveAutocompletion: true
+});
+
+var aCompleter = {
+getCompletions: function(editor, session, pos, prefix, callback) {
+console.log(pos);
+console.log(prefix);
+
+if (prefix.length === 0) { callback(null, []); return }
+wordList = [
+{"word":"flow","freq":24,"score":300,"flags":"bc","syllables":"1"},
+{"word":"late","freq":24,"score":300,"flags":"bc","syllables":"1"}];
+callback(null, wordList.map(function(ea) {
+return {name: ea.word, value: ea.word, score: ea.score, meta: "rhyme"}
+}));
+/*$.getJSON(
+"http://rhymebrain.com/talk?function=getRhymes&word=" + prefix,
+function(wordList) {
+// wordList like [{"word":"flow","freq":24,"score":300,"flags":"bc","syllables":"1"}]
+callback(null, wordList.map(function(ea) {
+return {name: ea.word, value: ea.word, score: ea.score, meta: "rhyme"}
+}));
+})*/
+}
+}
+langTools.addCompleter(aCompleter);
+
+editor.getSession().on('change', function(e) {
+//editor.completers[3].showPopup(editor);
+//langTools.doLiveAutocomplete(e);
+/*var pos = editor.getCursorPosition();
+var line = editor.session.getLine(pos.row);
+var prefix = util.retrievePrecedingIdentifier(line, pos.column);
+editor.completers.forEach(function(completer) {
+if (completer.identifierRegexps) {
+completer.identifierRegexps.forEach(function(identifierRegex) {
+if (!prefix && identifierRegex)
+prefix = util.retrievePrecedingIdentifier(line, pos.column, identifierRegex);
+});
+}
+});
+console.log(prefix);
+//	console.log(editor.getSession());
+
+//var s = editor.getSession().selection;
+//s.selectWordRight();
+//console.log(s.getWordRange(e.data.range.start.row, e.data.range.start.column));
+/*aCompleter.getCompletions(editor, editor.getSession(), e.data.range.start,
+aCompleter.getCompletionPrefix(editor),
+function(n, wordList.map(function(ea) {
+return {name: ea.word, value: ea.word, score: ea.score, meta: "rhyme"}
+}))
+);*/
+});
+
+</script -->

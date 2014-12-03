@@ -1,0 +1,73 @@
+
+.my-div {
+  background-color: #181e21;
+}
+
+md-content.darked {
+background: -webkit-linear-gradient(135deg, #69c8e7 0%, #49d3b4 100%);
+  background: -moz-linear-gradient(135deg, #69c8e7 0%, #49d3b4 100%);
+  background: -o-linear-gradient(135deg, #69c8e7 0%, #49d3b4 100%);
+  background: -ms-linear-gradient(135deg, #69c8e7 0%, #49d3b4 100%);
+  background: linear-gradient(-45deg, #69c8e7 0%, #49d3b4 100%);
+}
+
+p.lighted {
+  color: white;
+}
+
+
+
+input.custom {
+  border-radius: 3px;
+  border-style: none;
+}
+
+span.custom {
+  background: url(/assets/Mag-Glass-copie.png);
+}
+/* line 1, /Users/diver/neocom/app/assets/stylesheets/main.css.scss */
+.node rect {
+  cursor: pointer;
+  fill: #fff;
+  fill-opacity: .5;
+  stroke: #3182bd;
+  stroke-width: 1.5px;
+}
+
+/* line 9, /Users/diver/neocom/app/assets/stylesheets/main.css.scss */
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+/* line 14, /Users/diver/neocom/app/assets/stylesheets/main.css.scss */
+path.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 3px;
+}
+
+/* line 20, /Users/diver/neocom/app/assets/stylesheets/main.css.scss */
+#editor {
+  position: absolute;
+  top: 50px;
+  width: 500px;
+  height: 350px;
+  border-color: red;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

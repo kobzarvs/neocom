@@ -1,0 +1,23 @@
+
+.my-div {
+  background-color: #181e21;
+}
+
+.darked {
+  background: linear-gradient(90deg, #03a9f4 0%, black 100%);
+}
+
+p.lighted {
+  color: white;
+}
+
+
+
+input.custom {
+  border-radius: 3px;
+  border-style: none;
+}
+
+span.custom {
+  background: url(/assets/Mag-Glass-copie.png);
+}
