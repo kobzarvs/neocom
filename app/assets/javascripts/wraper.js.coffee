@@ -1,41 +1,13 @@
 w = angular.module('wraper',['utils']) #.constant('_', window._)
 
-# w.factory '_', ['$window', ($window) ->
-# 	$window._
-# ]
 
 
-
-w.directive 'wraper', ['$compile', '$document', '$http', '$rootElement', ($compile, $document, $http, $rootElement) ->
+w.directive 'wraper', ['$compile', '$document', '$http', '$rootElement', '$utils', ($compile, $document, $http, $rootElement, $utils) ->
 
 	link = ($scope, $elem, $attr) ->
-		console.log "Link init..."
-		console.log $scope, $elem, $attr
-		
-		self = this
-		$scope.sx=0
-		$scope.sy=0
-		$scope.e = null
-		[$scope.angle, $scope.distance] = [0,0]
+		scope = $scope
 
-		#
-		# load template from site and append to current element 
-		#
-		appendFromTemplate = (dest, path) ->
-			$http.get path
-				.success (data) ->
-					e = $compile(data)($scope)
-					dest.append e
-					$scope.tmpElem = e
-					$scope.$applyAsync()
 
-		dispatchEvent = (elem, event) ->
-			  if elem.dispatchEvent
-			    elem.dispatchEvent event
-			  else if elem.fireEvent
-			    elem.fireEvent 'on' + event.type, event
-
-			  return event
 
 		#
 		# calc arrow params
@@ -160,14 +132,11 @@ w.directive 'wraper', ['$compile', '$document', '$http', '$rootElement', ($compi
 					show elem
 				(elem) ->
 					console.log "trigger", e
-					evt = mouseEvent e.type, e.x, e.y, e.x, e.y
-					dispatchEvent elem, evt
+					evt = $utils.mouseEvent e.type, e.x, e.y, e.x, e.y
+					$utils.dispatchEvent elem, evt
 
 			return false
 				
-				
-
-
 
 		#
 		# mouse events
@@ -179,13 +148,15 @@ w.directive 'wraper', ['$compile', '$document', '$http', '$rootElement', ($compi
 			$scope.sy = e.y #- $scope.oy
 			body = getBody e.target
 			#console.log _.keys(e.target)
-			
-			appendFromTemplate $rootElement, 'assets/connector.html'
+			console.log "SCOPE 1:", $scope
+			$utils.appendFromTemplate $rootElement, 'assets/connector.html', $scope
+			$scope.$digest()
 			e.preventDefault()
 			$document.on 'mousemove', mousemove
 			$document.on 'mouseup', mouseup
 			$elem.off 'mousedown', mousedown
 			refreshArrow 0,0
+
 
 		mouseup = ->
 			$elem.on 'mousedown', mousedown
@@ -194,10 +165,8 @@ w.directive 'wraper', ['$compile', '$document', '$http', '$rootElement', ($compi
 			elem = cutElement $scope.tmpElem[0]
 			pasteElement elem
 			angular.element(elem).on 'mousedown click', silencer
-
-
-			
 			console.log "mouse up"
+
 
 		mousemove = (e)->
 			dx = e.x - $scope.sx

@@ -1,0 +1,201 @@
+/* line 1, /Users/diver/neocom/app/assets/stylesheets/connector.css.scss */
+.connector {
+  z-index: 999998;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  border: 1px solid red;
+  height: 0px;
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+}
+
+.my-div {
+  background-color: #181e21;
+}
+
+.darked {
+  background: linear-gradient(90deg, #03a9f4 0%, black 100%);
+}
+
+p.lighted {
+  color: white;
+}
+
+
+
+input.custom {
+  border-radius: 3px;
+  border-style: none;
+}
+
+span.custom {
+  background: url(/assets/Mag-Glass-copie.png);
+}
+
+.animate-switch-container {
+  position:relative;
+  background:white;
+  border:none solid black;
+  height:50px;
+  overflow:hidden;
+}
+
+.animate-switch {
+  padding:10px;
+}
+
+.animate-switch.ng-animate {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.animate-switch.ng-leave.ng-leave-active,
+.animate-switch.ng-enter {
+  left:-150px;
+}
+.animate-switch.ng-leave,
+.animate-switch.ng-enter.ng-enter-active {
+  left:0;
+}
+
+.custom-hide {
+	display:block!important;
+	position:absolute;
+	top:-9999px;
+	left:-9999px;
+}
+/* line 1, /Users/diver/neocom/app/assets/stylesheets/main.css.scss */
+.node rect {
+  cursor: pointer;
+  fill: #fff;
+  fill-opacity: .5;
+  stroke: #3182bd;
+  stroke-width: 1.5px;
+}
+
+/* line 9, /Users/diver/neocom/app/assets/stylesheets/main.css.scss */
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+/* line 14, /Users/diver/neocom/app/assets/stylesheets/main.css.scss */
+path.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 3px;
+}
+
+/* line 20, /Users/diver/neocom/app/assets/stylesheets/main.css.scss */
+#editor {
+  position: absolute;
+  top: 50px;
+  width: 500px;
+  height: 350px;
+  border-color: red;
+}
+/* line 1, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/diver/neocom/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

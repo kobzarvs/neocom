@@ -22,7 +22,7 @@
 		
 		<div connector-title-container-1 style="-moz-transform: rotate({{side}}deg); -moz-transform-origin: center {{offsetY[0]}}%; -webkit-transform: rotate({{side}}deg); -webkit-transform-origin: center {{offsetY[0]}}%; -o-transform: rotate({{side}}deg); -o-transform-origin: center {{offsetY[0]}}%; -ms-transform: rotate({{side}}deg); -ms-transform-origin: center {{offsetY[0]}}%; transform: rotate({{side}}deg); transform-origin: center {{offsetY[0]}}%;">
 			
-			<span connector-title ng-hide="title.innerText.length>0" style="z-index: 999999;border:1px solid red; background:white; border-top:none; border-bottom:none; font-size: 1.4em;" class="md-whiteframe-z4">
+			<span connector-title ng-show="title.innerText" style="z-index: 999999;border:1px solid red; background:white; border-top:none; border-bottom:none; font-size: 1.4em;" class="md-whiteframe-z4">
 			{{title.innerText}}
 			</span>
 		</div>
