@@ -12,10 +12,12 @@
 //
 
 //= require bower_components/angular/angular.js
-//= require mymodule
 //= require ui-bootstrap-tpls-0.12.0.min
 //= require bower_components/hammerjs/hammer
 //= require bower_components/angular-aria/angular-aria
 //= require bower_components/angular-animate/angular-animate
 //= require bower_components/angular-material/angular-material
+// require mymodule
+// require utils
 //= require_tree .
+

@@ -1,0 +1,38 @@
+
+<div class="connector" connector-main
+	style="position:absolute; width:{{distance}}px; left:{{sx}}px; top:{{sy}}px;
+		-moz-transform: rotate({{angle}}deg);
+		-webkit-transform: rotate({{angle}}deg);
+		-o-transform: rotate({{angle}}deg);
+		-ms-transform: rotate({{angle}}deg);
+		transform: rotate({{angle}}deg);">
+		
+	<div class="connector" connector-arrow
+		style="width:15px; position: relative; left: 100%;
+			transform: rotate(-170deg);-webkit-transform: rotate(-170deg);"></div>
+	<div class="connector" connector-arrow
+		style="width:15px; position: relative; left: 100%;
+			transform: rotate(170deg);-webkit-transform: rotate(170deg);"></div>
+		
+	<div connector-title-container-2 style="-moz-transform: rotate(180deg); -moz-transform-origin: center {{offsetY[1]}}%;
+	-webkit-transform: rotate(180deg); -webkit-transform-origin: center {{offsetY[1]}}%;
+	-o-transform: rotate(180deg); -o-transform-origin: center {{offsetY[1]}}%;
+	-ms-transform: rotate(180deg); -ms-transform-origin: center {{offsetY[1]}}%;
+	transform: rotate(180deg);transform-origin: center {{offsetY[1]}}%;">
+		
+		<div connector-title-container-1 style="-moz-transform: rotate({{side}}deg); -moz-transform-origin: center {{offsetY[0]}}%; -webkit-transform: rotate({{side}}deg); -webkit-transform-origin: center {{offsetY[0]}}%; -o-transform: rotate({{side}}deg); -o-transform-origin: center {{offsetY[0]}}%; -ms-transform: rotate({{side}}deg); -ms-transform-origin: center {{offsetY[0]}}%; transform: rotate({{side}}deg); transform-origin: center {{offsetY[0]}}%;">
+			
+			<span connector-title ng-show="title.innerText" style="z-index: 999999;border:1px solid red; background:white; border-top:none; border-bottom:none; font-size: 1.4em;" class="md-whiteframe-z4">
+			{{title.innerText}}
+			</span>
+		</div>
+	</div>
+<!--div style="position:fixed; left:0px; top:0px; width:100px; height:100px; background:#f0f0f0" class="md-whiteframe-z4">
+	[{{side}}]</br>
+	[{{angle}}]</br>
+	[{{distance}}]</br>
+	[{{offsetY}}]</br>
+	[{{sx}}, {{sy}}]
+</div-->
+</div>
+

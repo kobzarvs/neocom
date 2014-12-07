@@ -1,14 +1,14 @@
 <section layout="row" flex>
 
-  <md-content layout="column" flex="20" layout-align="start start" class="md-theme-indigo" ng-controller="AppCtrl">
-		<md-toolbar class="md-whiteframe-z2">
+  <md-content layout="column" flex="20" layout-align="start start" class="md-theme-indigo" ng-controller="TimeCtrl as tc">
+		<d-toolbar class="md-whiteframe-z2">
       <h1 class="md-toolbar-tools">Labels</h1>
     </md-toolbar>
 		<md-content class="md-padding" flex style="width:100%">
-			<md-list ng-repeat="i in items">
+			<md-list ng-repeat="i in labels">
 				<md-item>
 					<md-item-content>
-					<md-button style="width:100%; text-align:left"> Primary {{i}} </md-button>
+					<md-button style="width:100%; text-align:left"> {{i}} </md-button>
 					</md-item-content>
 				</md-item>
 			</md-list>
@@ -22,21 +22,49 @@
   </md-content>
 	
 	<md-content flex ng-controller="AppCtrl" layout="column" layout-fill layout-align="start start">
-			<md-toolbar  class="md-padding md-whiteframe-z2 darked">
+			<d-toolbar  class="md-padding md-whiteframe-z2 darked">
 	      <h1 class="md-toolbar-tools">Labels</h1>
 	    </md-toolbar>
 			
 			<md-content>
-	      <p>
-	        The left sidenav will 'lock open' on a medium (>=960px wide) device.
+	      
+
+				<div class="animate-switch-container ng-padding" ng-switch on="data.selectedIndex">
 					
-	      </p>
+					<div>
+						<div ng-switch-when="1" class="animate-switch">
+						<md-button style="width:100%; text-align:left"> Primary 1 </md-button>
+						</div>
+						<div ng-switch-when="2" class="animate-switch">
+						<md-button style="width:100%; text-align:left"> Primary 2 </md-button>
+						</div>
+						<div ng-switch-when="3" class="animate-switch">
+						<md-button style="width:100%; text-align:left"> Primary 3 </md-button>
+						</div>
+					</div>
+				</div>
+				
+		      <p>
+		        The left sidenav will 'lock open' on a medium (>=960px wide) device.
+					
+		      </p>
+				
+
+	      <div layout="row">
+	        <md-button ng-click="toLeft()" class="md-primary">
+	          Left
+	        </md-button>
+	        <md-button ng-click="toRight()" class="md-primary">
+	          Right
+	        </md-button>
+				</div>
 
 	      <div>
 	        <md-button ng-click="toggleRight()" class="md-primary">
 	          Toggle right
 	        </md-button>
 	      </div>
+				
 	      <div>
 	        <input type="search" placeholder="Search..." class="md-whiteframe-z1 custom" ></input>
 	      </div>
